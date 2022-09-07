@@ -1,0 +1,183 @@
+:root {
+  --brand: #0d6efd;
+  --dark: #092032;
+}
+
+/* carousel */
+
+/* slider */
+/* .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 30px;
+} */
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+
+/* boton  */
+
+.iconos a {
+  margin: 0 0.1rem;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+.top-nav {
+  background-color: var(--brand);
+  color: #fff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.top-nav p {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+
+.top-nav span,
+.top-nav i {
+  vertical-align: middle;
+}
+
+.navbar {
+  box-shadow: var(--shadow);
+}
+
+.social-icons a {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.25);
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+}
+
+.social-icons a {
+  transition: 0.4s all;
+}
+
+.social-icons a:hover {
+  background-color: #fff;
+  color: var(--brand);
+  transform: scale(1.6);
+}
+
+.navbar .navbar-nav .nav-link {
+  color: var(--dark);
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--brand);
+}
+
+.navbar .navbar-nav .nav-link.active {
+  color: var(--brand);
+}
+
+.navbar-brand {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.navbar-brand .dot {
+  color: var(--brand);
+}
+
+/* navbar */
+
+#menu li > a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3f3f3f;
+}
+
+#menu form > button {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#menu {
+  background-color: rgb(255, 253, 250);
+}
+
+.carousel-inner {
+  max-height: 39rem;
+}
+
+/* BG CONTACTO */
+
+#bg-contacto {
+  position: relative;
+  top: -130px;
+}
+
+#seccion-contacto {
+  background-color: #063a87;
+  min-height: 500px;
+  position: relative;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+  #intro,
+  #equipo {
+    width: 90% !important;
+  }
+
+  .servicio-fila {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  #bg-contacto {
+    top: -110px;
+  }
+}
+
+/* MEDIA QUERIES PANTALLAS EXTRA SM */
+
+@media (max-width: 576px) {
+  .icon-wrap {
+    flex-wrap: wrap;
+    justify-content: center !important;
+  }
+  .col-auto p {
+    display: none;
+  }
+}
